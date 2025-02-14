@@ -1,4 +1,4 @@
-package com.amigoscode.person;
+package com.bender.person;
 
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
@@ -21,7 +21,8 @@ public class PersonRepository {
                         idCounter.incrementAndGet(),
                         "John",
                         20,
-                        Gender.MALE
+                        Gender.MALE,
+                        "John@John.com"
                 )
         );
         people.add(
@@ -29,14 +30,16 @@ public class PersonRepository {
                         idCounter.incrementAndGet(),
                         "Mariam",
                         18,
-                        Gender.FEMALE)
+                        Gender.FEMALE,
+                        "Mariam@Mariam.com")
         );
         people.add(
                 new Person(
                         idCounter.incrementAndGet(),
                         "Samba",
                         30,
-                        Gender.MALE)
+                        Gender.MALE,
+                        "Samba@Samba.com")
         );
     }
 

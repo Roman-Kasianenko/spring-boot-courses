@@ -1,4 +1,4 @@
-package com.amigoscode.validation;
+package com.bender.validation;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

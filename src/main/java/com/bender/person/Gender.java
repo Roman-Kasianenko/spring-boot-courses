@@ -1,4 +1,4 @@
-package com.amigoscode.person;
+package com.bender.person;
 
 public enum Gender {
     MALE, FEMALE

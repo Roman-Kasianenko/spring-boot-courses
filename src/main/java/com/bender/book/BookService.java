@@ -1,4 +1,4 @@
-package com.amigoscode.book;
+package com.bender.book;
 
 import org.springframework.stereotype.Service;
 

@@ -2,4 +2,4 @@
 
 Starter branch for spring and spring boot master class course.
 
-Access course here: http://amigoscode.com/courses/spring-boot
+Access course here: http://bender.com/courses/spring-boot

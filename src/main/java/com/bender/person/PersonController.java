@@ -1,6 +1,6 @@
-package com.amigoscode.person;
+package com.bender.person;
 
-import com.amigoscode.SortingOrder;
+import com.bender.SortingOrder;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.Valid;
@@ -38,10 +38,10 @@ public class PersonController {
 
 
     @GetMapping("{id}")
-    public ResponseEntity<Optional<Person>> getPersonById(
+    public ResponseEntity<Person> getPersonById(
             @PathVariable("id") Integer id
     ) {
-        Optional<Person> person = personService.getPersonById(id);
+        Person person = personService.getPersonById(id);
         return ResponseEntity.ok().body(person);
     }
 
