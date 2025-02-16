@@ -1,53 +1,10 @@
 package com.bender.person;
 
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
+public interface PersonRepository extends JpaRepository<Person, Integer> {
 
-@Repository
-public class PersonRepository {
+    boolean existsByEmail(String email);
 
-    private final AtomicInteger idCounter =
-            new AtomicInteger(0);
-
-    private final List<Person> people = new ArrayList<>();
-
-    {
-        people.add(
-                new Person(
-                        idCounter.incrementAndGet(),
-                        "John",
-                        20,
-                        Gender.MALE,
-                        "John@John.com"
-                )
-        );
-        people.add(
-                new Person(
-                        idCounter.incrementAndGet(),
-                        "Mariam",
-                        18,
-                        Gender.FEMALE,
-                        "Mariam@Mariam.com")
-        );
-        people.add(
-                new Person(
-                        idCounter.incrementAndGet(),
-                        "Samba",
-                        30,
-                        Gender.MALE,
-                        "Samba@Samba.com")
-        );
-    }
-
-    public AtomicInteger getIdCounter() {
-        return idCounter;
-    }
-
-    public List<Person> getPeople() {
-        return people;
-    }
 }
